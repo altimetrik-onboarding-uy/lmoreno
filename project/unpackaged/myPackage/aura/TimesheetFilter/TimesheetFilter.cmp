@@ -1,0 +1,7 @@
+<aura:component >
+    <aura:attribute name="filter" type="boolean"/>
+    <aura:attribute name="all" type="boolean" />
+    <aura:registerEvent name="updateFilter" type="c:TimesheetEvent"/>
+	<ui:button class="btn" label="Filter" press="{!c.filter}"/>
+    <ui:button class="btn" label="All" press="{!c.all}"/>
+</aura:component>

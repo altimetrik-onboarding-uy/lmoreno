@@ -1,0 +1,47 @@
+<aura:component controller="GetTimesheets">
+    <aura:attribute name="timesheets" type="Timesheet__c[]"/>
+    <aura:attribute name="filter" type="boolean" default="false"/>
+    <aura:attribute name="all" type="boolean" default="false"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+
+    <table class="slds-table slds-table_cell-buffer slds-table--striped slds-table_bordered slds-table_col-bordered">
+            <thead style= "border-color: black">  
+                <tr class="tr slds-line-height_reset">
+                    <th class="th" scope="col">
+                        <b class="slds-truncate" title="Employee's name">Employee's name</b>
+                    </th>         
+                    <th class="th" scope="col">
+                        <b title="Employee's date of birth">Employee's date of birth</b>
+                    </th>
+                    <th class="th" scope="col">
+                        <b title="Star Date">Start Date</b>
+                    </th>
+                    <th class="th" scope="col">
+                        <b title="End Date">End Date</b>
+                    </th>
+                    <th class="th" scope="col">
+                        <b title="Total Hours">Total hours</b>
+                    </th>
+                    <th class="th" scope="col">
+                        <b title="Gross Pay">Gross Pay</b>
+                    </th>
+                    <th class="th" scope="col">
+                        <b title="Taxes">Taxes</b>
+                    </th>
+                    <th class="th" scope="col">
+                        <b title="Type">Type</b>
+                    </th>
+                    <th class="th" scope="col">
+                        <b title="Submitted">Submitted</b>
+                    </th>
+                </tr>
+            </thead>
+            <tbody> 
+                 <c:TimesheetsIteration timesheets="{!v.timesheets}" />  
+            </tbody>
+        </table>
+    
+    <c:TimesheetFilter filter="{!v.filter}" all="{!v.all}" updateFilter="{!c.change}"/>
+    
+</aura:component>
