@@ -1,0 +1,19 @@
+.THIS .colbackground {
+	background-color:#CAE2F8
+}
+
+.THIS .table {
+  border-collapse: unset;
+  border-spacing: 0;
+  width: 100%;
+  border: 2px solid #ddd;
+}
+
+.THIS .th{
+  text-align: left;
+  padding: 16px;
+}
+
+.THIS .tr{
+  background-color: #f2f2f2
+}

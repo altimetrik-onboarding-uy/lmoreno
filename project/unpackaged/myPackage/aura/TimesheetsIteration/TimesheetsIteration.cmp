@@ -1,0 +1,35 @@
+<aura:component controller="GetTimesheets"> 
+    <aura:attribute name="timesheets" type="Timesheet__c[]"/>
+    <aura:handler name="init" value="{!this}" action="{!c.init}" rowclasses="even odd"/>
+    <aura:iteration items="{!v.timesheets}" var="item" >
+        <tr class="slds-line-height_reset">
+            <th class="" scope="col">
+                {!item.Contact__r.FirstName} <br/>
+            </th>             
+            <th class="" scope="col">
+                <lightning:formattedDateTime value="{!item.Contact__r.Birthdate}"  year="numeric" day="2-digit" month="long" /> <br/>
+            </th>
+            <th class="" scope="col">
+                {!item.StartDate__c} <br/>
+            </th> 
+            <th class="" scope="col">
+                {!item.EndDate__c} <br/>
+            </th> 
+            <th class="" scope="col">
+                {!item.Hours__c} <br/>
+            </th> 
+            <th class="" scope="col">
+                {!item.Gross_Pay__c} <br/>
+            </th> 
+            <th class="" scope="col">
+                {!item.Taxes__c} <br/>
+            </th> 
+            <th class="" scope="col">
+                {!item.Type_of_timesheets__c}  <br/>
+            </th>
+            <th class="" scope="col">
+                {!item.Status__c}  <br/>
+            </th> 
+        </tr>
+    </aura:iteration>
+</aura:component>
