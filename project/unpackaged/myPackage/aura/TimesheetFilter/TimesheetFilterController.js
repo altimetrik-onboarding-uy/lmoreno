@@ -8,11 +8,11 @@
         helper.helperAll(component);
     },
     
-    submitted : function (component) {
-        helperSubmitted(component);
+    submitted : function (cosmponent) {
+        helper.helperSubmitted(component);
     },
 
     notSubmitted : function (component) {
-        helperNotSubmitted(component);
+        helper.helperNotSubmitted(component);
     }
 })
