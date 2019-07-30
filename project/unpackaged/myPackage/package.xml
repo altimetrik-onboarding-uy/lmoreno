@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>myPackage</fullName>
+    <fullName>part3</fullName>
     <types>
         <members>GetTimesheets</members>
-        <members>MyTestClass</members>
         <name>ApexClass</name>
     </types>
     <types>
-        <members>GeneralInformation</members>
-        <members>TimeEntry</members>
         <members>TimesheetEvent</members>
         <members>TimesheetFilter</members>
         <members>TimesheetList</members>
         <members>TimesheetsApp</members>
         <members>TimesheetsIteration</members>
-        <members>TimesheetsIteration2</members>
         <members>TimesheetsList</members>
         <name>AuraDefinitionBundle</name>
     </types>

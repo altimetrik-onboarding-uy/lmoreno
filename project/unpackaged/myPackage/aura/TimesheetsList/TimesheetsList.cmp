@@ -1,6 +1,8 @@
 <aura:component controller="GetTimesheets">
     <aura:attribute name="timesheets" type="Timesheet__c[]"/>
     <aura:attribute name="filter" type="boolean" default="false"/>
+    <aura:attribute name="submitted" type="boolean" default="false"/>
+    <aura:attribute name="notSubmitted" type="boolean" default="false" />
     <aura:attribute name="all" type="boolean" default="false"/>
 
     <aura:handler name="init" value="{!this}" action="{!c.init}"/>
@@ -42,6 +44,6 @@
             </tbody>
         </table>
     
-    <c:TimesheetFilter filter="{!v.filter}" all="{!v.all}" updateFilter="{!c.change}"/>
+    <c:TimesheetFilter filter="{!v.filter}" all="{!v.all}" submitted="{!v.submitted}" notSubmitted="{!v.notSubmitted}" updateFilter="{!c.change}"/>
     
 </aura:component>

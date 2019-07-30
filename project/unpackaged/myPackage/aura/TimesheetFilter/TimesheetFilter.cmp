@@ -1,7 +1,11 @@
 <aura:component >
     <aura:attribute name="filter" type="boolean"/>
     <aura:attribute name="all" type="boolean" />
+    <aura:attribute name="submitted" type="boolean" />
+    <aura:attribute name="notSubmitted" type="boolean" />
     <aura:registerEvent name="updateFilter" type="c:TimesheetEvent"/>
-	<ui:button class="btn" label="Filter" press="{!c.filter}"/>
+	<ui:button class="btn" label="Only Last" press="{!c.filter}"/>
+    <ui:button class="btn" label="Submitted" press="{!c.submitted}"/>
+    <ui:button class="btn" label="Not Submitted" press="{!c.notSubmitted}"/>
     <ui:button class="btn" label="All" press="{!c.all}"/>
 </aura:component>
